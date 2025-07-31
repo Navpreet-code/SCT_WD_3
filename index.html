@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Quiz Game</h1><hr>
+    <div class="progress mb-4" style="height:12px;">
+      <div id="progressBar" class="progress-bar bg-primary"></div>
+    </div>
+
+    <div id="questions-container">
+      <div class="question active" id="q1">
+        <div class="qn">Question 1 of 15</div>
+        <div class="qt">What does HTML stand for?</div>
+        <div class="op">
+          <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+          <label><input type="radio" name="q1" value="b"> Home Tool Markup Language</label>
+          <label><input type="radio" name="q1" value="c"> Hyperlinks and Text Markup Language</label>
+          <label><input type="radio" name="q1" value="d"> Hyper Text Main Link</label>
+        </div>
+      </div>
+
+     <div class="question" id="q2">
+        <div class="qn">Question 2 of 15</div>
+        <div class="qt">Which CSS property is used to control text size?</div>
+        <div class="op">
+          <label><input type="radio" name="q2"  value="a"> font-style</label>
+          <label><input type="radio" name="q2"  value="b"> text-size</label>
+          <label><input type="radio" name="q2"  value="c"> font-size</label>
+          <label><input type="radio" name="q2"  value="d"> text-style</label>
+        </div>
+      </div>
+
+      <div class="question" id="q3">
+        <div class="qn">Question 3 of 15</div>
+        <div class="qt">Which of the following are scripting languages?</div>
+        <div class="op">
+          <label><input type="checkbox" name="q3" value="a"> JavaScript</label>
+          <label><input type="checkbox" name="q3" value="b"> Python</label>
+          <label><input type="checkbox" name="q3" value="c"> HTML</label>
+          <label><input type="checkbox" name="q3" value="d"> C++</label>
+        </div>
+      </div>
+
+      <div class="question" id="q4">
+        <div class="qn">Question 4 of 15</div>
+        <div class="qt">What tag is used for inserting a line break in HTML?</div>
+        <div class="op">
+          <label><input type="radio" name="q4" value="a"> &lt;break&gt;</label>
+          <label><input type="radio" name="q4" value="b"> &lt;lb&gt;</label>
+          <label><input type="radio" name="q4" value="c"> &lt;br&gt;</label>
+          <label><input type="radio" name="q4" value="d"> &lt;line&gt;</label>
+        </div>
+      </div>
+
+      <div class="question" id="q5">
+        <div class="qn">Question 5 of 15</div>
+        <div class="qt">What symbol is used for ID selector in CSS?</div>
+        <div class="op">
+          <label><input type="radio" name="q5" value="a"> .</label>
+          <label><input type="radio" name="q5" value="b"> #</label>
+          <label><input type="radio" name="q5" value="c"> @</label>
+          <label><input type="radio" name="q5" value="d"> %</label>
+        </div>
+      </div>
+
+      <div class="question" id="q6">
+        <div class="qn">Question 6 of 15</div>
+        <div class="qt">What does CSS stand for?</div>
+        <div class="op">
+          <label><input type="radio" name="q6" value="a"> Cascading Style Sheets</label>
+          <label><input type="radio" name="q6" value="b"> Colorful Style Sheets</label>
+          <label><input type="radio" name="q6" value="c"> Creative Style Syntax</label>
+          <label><input type="radio" name="q6" value="d"> Computer Style Sheet</label>
+        </div>
+      </div>
+
+      <div class="question" id="q7">
+        <div class="qn">Question 7 of 15</div>
+        <div class="qt">Which HTML tag is used to define an internal style sheet?</div>
+        <div class="op">
+          <label><input type="radio" name="q7" value="a"> &lt;css&gt;</label>
+          <label><input type="radio" name="q7" value="b"> &lt;script&gt;</label>
+          <label><input type="radio" name="q7" value="c"> &lt;style&gt;</label>
+          <label><input type="radio" name="q7" value="d"> &lt;link&gt;</label>
+        </div>
+      </div>
+
+      <div class="question" id="q8">
+        <div class="qn">Question 8 of 15</div>
+        <div class="qt">Inside which HTML element do we put the JavaScript?</div>
+        <div class="op">
+          <label><input type="radio" name="q8" value="a"> &lt;js&gt;</label>
+          <label><input type="radio" name="q8" value="b"> &lt;scripting&gt;</label>
+          <label><input type="radio" name="q8" value="c"> &lt;script&gt;</label>
+          <label><input type="radio" name="q8" value="d"> &lt;javascript&gt;</label>
+        </div>
+      </div>
+
+      <div class="question" id="q9">
+        <div class="qn">Question 9 of 15</div>
+        <div class="qt">How do you write 'Hello World' in an alert box in JS?</div>
+        <div class="op">
+          <label><input type="radio" name="q9" value="a"> msg('Hello World')</label>
+          <label><input type="radio" name="q9" value="b"> alertBox('Hello World')</label>
+          <label><input type="radio" name="q9" value="c"> alert('Hello World')</label>
+          <label><input type="radio" name="q9" value="d"> msgBox('Hello World')</label>
+        </div>
+      </div>
+
+      <div class="question" id="q10">
+        <div class="qn">Question 10 of 15</div>
+        <div class="qt">Which event occurs when the user clicks on an HTML element?</div>
+        <div class="op">
+          <label><input type="radio" name="q10" value="a"> onchange</label>
+          <label><input type="radio" name="q10" value="b"> onclick</label>
+          <label><input type="radio" name="q10" value="c"> onmouseclick</label>
+          <label><input type="radio" name="q10" value="d"> onmouseover</label>
+        </div>
+      </div>
+
+      <div class="question" id="q11">
+        <div class="qn">Question 11 of 15</div>
+        <div class="qt">Which method is used to write content in the browser in JS?</div>
+        <div class="op">
+          <label><input type="radio" name="q11" value="a"> document.write()</label>
+          <label><input type="radio" name="q11" value="b"> console.log()</label>
+          <label><input type="radio" name="q11" value="c"> window.print()</label>
+          <label><input type="radio" name="q11" value="d"> write()</label>
+        </div>
+      </div>
+
+      <div class="question" id="q12">
+        <div class="qn">Question 12 of 15</div>
+        <div class="qt">What does SQL stand for?</div>
+        <div class="op">
+          <label><input type="radio" name="q12" value="a"> Stylish Question Language</label>
+          <label><input type="radio" name="q12" value="b"> Stylesheet Query Language</label>
+          <label><input type="radio" name="q12" value="c"> Structured Query Language</label>
+          <label><input type="radio" name="q12" value="d"> Statement Question Language</label>
+        </div>
+      </div>
+
+      <div class="question" id="q13">
+        <div class="qn">Question 13 of 15</div>
+        <div class="qt">What does API stand for?</div>
+        <div class="op">
+          <label><input type="radio" name="q13" value="a"> Application Programming Interface</label>
+          <label><input type="radio" name="q13" value="b"> Advanced Program Interface</label>
+          <label><input type="radio" name="q13" value="c"> Application Protocol Interface</label>
+          <label><input type="radio" name="q13" value="d"> Application Parsing Interface</label>
+        </div>
+      </div>
+
+      <div class="question" id="q14">
+        <div class="qn">Question 14 of 15</div>
+        <div class="qt">Which one is a NoSQL database?</div>
+        <div class="op">
+          <label><input type="radio" name="q14" value="a"> MySQL</label>
+          <label><input type="radio" name="q14" value="b"> MongoDB</label>
+          <label><input type="radio" name="q14" value="c"> Oracle</label>
+          <label><input type="radio" name="q14" value="d"> PostgreSQL</label>
+        </div>
+      </div>
+
+      <div class="question" id="q15">
+        <div class="qn">Question 15 of 15</div>
+        <div class="qt">Which tool is used to manage project dependencies in JS?</div>
+        <div class="op">
+          <label><input type="radio" name="q15" value="a"> npm</label>
+          <label><input type="radio" name="q15" value="b"> composer</label>
+          <label><input type="radio" name="q15" value="c"> pip</label>
+          <label><input type="radio" name="q15" value="d"> yarn</label>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="res fadeInUp" id="result"></div>
+    <div id="msgPerfect" class="res-msg fadeInUp" style="display:none;">
+       <h2 style="color:#ee0505;">🎉 Congratulations!</h2>
+      <b><span style="font-size:20px;">Perfect!! You Scored 15/15.</span></b>
+    </div>
+
+    <div id="msgNone" class="res-msg fadeInUp" style="display:none;">
+       <h2 style="color:#1128f7;">😞 Keep Practicing!</h2>
+       <b><span style="font-size:20px;">You scored 0 / 15</span></b>
+    </div>
+
+   <div id="msgMid" class="res-msg fadeInUp" style="display:none;">
+  <h2 style="color:#ff00bf;">👍 Doing Well!</h2>
+  <b><span style="font-size:20px;">You scored <span id="scoreValue"></span> / 15</span></b>
+</div>
+
+
+    <div class="text-center mt-3">
+      <button type="button" class="rounded-pill b1" id="restartBtn" style="display: none;">Restart Quiz</button>
+
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+      <button type="button" class="rounded-pill b1" id="prevBtn">Previous</button>
+      <button type="button" class="rounded-pill b1" id="nextBtn">Next</button>
+      <button type="button" class="rounded-pill b1" id="submitBtn" style="display: none">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
